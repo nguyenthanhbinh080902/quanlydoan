@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="gmail.css">
+    <title>Email</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">Email</div>
+            <div class="exit-button">
+                <a class="navbar-brand" href="../admin.html">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </a>
+            </div>
+        </div> 
+        <form action="#">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details"><i class="fa-regular fa-envelope"></i> Your email</span>
+                    <input type="text" placeholder="Enter your email name: ">
+                </div>
+                <div class="input-box">
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="details">Phone No.</span>
+                    <input type="text" placeholder="Enter your Phone number: ">
+                </div>
+            </div>
+            <div class="sender-details">
+                <i class="fa-solid fa-share-from-square"></i>
+                <span class="details">Send to</span>
+                <input type="text" placeholder="Enter the email name: ">
+            </div>
+            <div class="sender-details">
+                <i class="fa-solid fa-comments"></i>
+                <span class="details">Your message</span>
+                <textarea id="message" rows="9" cols="70" placeholder="Enter yout message: "></textarea>
+            </div>
+            <div class="button-submit">
+                <input type="button" value="Submit"></i>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

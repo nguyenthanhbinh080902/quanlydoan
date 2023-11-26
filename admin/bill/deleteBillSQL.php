@@ -1,0 +1,16 @@
+<?php
+
+    $id = $_GET['id'];
+    
+    require_once '../../connect.php';
+
+    $deleteSQL = "DELETE FROM Bill WHERE Id='$id'";
+
+    if (mysqli_query($conn, $deleteSQL)){
+        header("Location: billForm.php");
+    }
+    else{
+        echo "Error deleting record: " .mysqli_error($conn);
+    }
+
+?>

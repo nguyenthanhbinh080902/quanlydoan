@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Loại Thức Ăn</title>
+    <link rel="stylesheet" href="addFoodCategory.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">Add FoodCategory</div>
+            <div class="exit-button">
+                <a class="navbar-brand" href="foodCategoryForm.php">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </a>
+            </div>
+        </div>
+        <form action="addFoodCategorySQL.php" method="post">
+            <div class="user-details">
+                <div class="input-box">
+                    <label for="Id">Id</label>
+                    <input type="text" name="Id" id="Id" class="form-control" placeholder="Enter your id: ">
+                </div>
+                <div class="input-box">
+                    <label for="Name">Name</label>
+                    <input type="text" id="Name" name="Name" placeholder="Enter the FoodCategory name: " class="form-control">
+                </div>
+                <div class="input-box">
+                    <label for="Icon">Icon</label>
+                    <input type="text" id="Icon" name="Icon" placeholder="Enter the FoodCategory icon: " class="form-control">
+                </div>
+            </div>
+            <div class="button-submit">
+                <button type="submit" class="btn">Save</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

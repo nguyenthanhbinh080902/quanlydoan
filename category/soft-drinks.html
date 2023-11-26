@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Bán Đồ Ăn Vặt Nhóm 3</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://www.foody.vn/style/images/logo/foody-vn.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- menu -->
+    <div class="menu border-bottom">
+      <!-- navbar -->
+      <nav
+        class="navbar navbar-expand-sm navbar-light bg-light"
+        style="height: 70px"
+      >
+        <div class="container-fluid" style="height: 100%">
+          <!-- logo -->
+          <a class="navbar-brand" style="height: 100%" href="../index.html">
+            <img
+              style="height: 100%"
+              src="https://www.foody.vn/style/images/logo/foody-vn.png"
+              alt=""
+            />
+          </a>
+          <!-- main menu -->
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item">
+                <a class="nav-link text-hover" href="../index.html"
+                  >Trang chủ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-hover" href="../collections.html"
+                  >Tất cả</a
+                >
+              </li>
+              <li>
+                <div class="dropdown">
+                  <button
+                    type="button"
+                    class="btn btn-light nav-link dropdown-toggle text-hover"
+                    data-bs-toggle="dropdown"
+                  >
+                    Đồ ăn
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item text-hover"
+                        href="../category/cakes.html"
+                        >Bánh</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-hover"
+                        href="../category/candies.html"
+                        >Kẹo</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-hover"
+                        href="../category/fried-foods.html"
+                        >Đồ chiên</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-hover"
+                        href="../category/snacks.html"
+                        >Snacks</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="dropdown">
+                  <button
+                    type="button"
+                    class="active-now btn btn-light nav-link dropdown-toggle text-hover"
+                    data-bs-toggle="dropdown"
+                  >
+                    Đồ uống
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item text-hover active-now"
+                        href="../category/soft-drinks.html"
+                        >Nước ngọt</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-hover"
+                        href="../category/milk-tea.html"
+                        >Trà sữa</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-hover" href="../admin.html">
+                  Admin
+                  </a>
+              </li>
+            </ul>
+
+            <!-- phải -->
+            <form class="d-flex">
+              <!-- giỏ hàng -->
+              <div class="dropdown">
+                <button
+                  class="btn btn-outline-danger me-5 dropdown-toggle"
+                  type="button"
+                  id="triggerId"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <!-- data-bs-toggle="dropdown" -->
+                  <i
+                    class="fa-solid fa-cart-shopping"
+                    style="pointer-events: none"
+                  ></i>
+                  <span
+                    class="total bg-danger text-light px-2 rounded"
+                    style="position: absolute; bottom: 20px; right: 40px"
+                    >0</span
+                  >
+                </button>
+
+                <div
+                  id="dropMenu"
+                  class="dropdown-menu dropdown-menu-end"
+                  style="min-width: 500px; min-height: 100px; right: 0px"
+                  aria-labelledby="triggerId"
+                >
+                  <h3 class="d-flex justify-content-center p-2 border-bottom">
+                    Giỏ hàng
+                  </h3>
+                  <!-- <a class="dropdown-item" href="#">Action</a> -->
+
+                  <table
+                    class="table table-striped table-hover table-borderless table-primary align-middle"
+                  >
+                    <tbody class="table-group cart-table"></tbody>
+                  </table>
+
+                  <div class="dropdown-divider"></div>
+
+                  <table class="table table-borderless">
+                    <tbody>
+                      <tr>
+                        <td>TỔNG TIỀN</td>
+                        <td class="cart-total">0 VNĐ</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="">
+                            <button
+                              type="button"
+                              class="btn btn-outline-danger"
+                            >
+                              XEM GIỎ HÀNG
+                            </button>
+                          </a>
+                        </td>
+                        <td>
+                          <a href="../checkouts.html">
+                            <button type="button" class="btn btn-danger">
+                              THANH TOÁN
+                            </button>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <input
+                class="form-control me-2"
+                type="text"
+                placeholder="Tìm kiếm"
+              />
+              <button class="btn btn-outline-danger" type="button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- banner -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide-to="2"
+        ></button>
+      </div>
+
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://theme.hstatic.net/200000523823/1000881506/14/home_bannerslider_1_picture.jpg?v=771"
+            class="d-block w-100"
+          />
+          <div class="carousel-caption"></div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://theme.hstatic.net/200000419141/1000794022/14/home_bannerslider_1_picture.jpg?v=144"
+            class="d-block w-100"
+          />
+          <div class="carousel-caption"></div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://file.hstatic.net/200000140033/file/cooking_at_home._happiness_with_family__8__5ad9048c0d964c14a3db20b56b6b7b49.png"
+            class="d-block w-100"
+          />
+          <div class="carousel-caption"></div>
+        </div>
+      </div>
+
+      <!-- Left and right controls/icons -->
+      <button
+        class="carousel-control-prev bg-dark"
+        style="height: 50px; width: 50px; margin: auto 0 auto 10px"
+        type="button"
+        data-bs-target="#demo"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next bg-dark"
+        style="height: 50px; width: 50px; margin: auto 10px auto 0"
+        type="button"
+        data-bs-target="#demo"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- tất cả sản phẩm -->
+    <div class="sectionCollection bg-light border-bottom p-3">
+      <div class="container pt-5">
+        <h3 class="title">Nước ngọt</h3>
+        <div class="wraplist-container">
+          <div class="row">
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice1.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>Nước ép dưa hấu</h5>
+                  <p><span class="price">10.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice2.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>Nước ép dâu</h5>
+                  <p><span class="price">10.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice3.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>Combo mùa hè</h5>
+                  <p><span class="price">25.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice4.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>Nước ép chanh dây</h5>
+                  <p><span class="price">10.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice5.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>Combo mùa đông</h5>
+                  <p><span class="price">25.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice6.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>Nước ép mãng cầu</h5>
+                  <p><span class="price">10.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice7.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>Combo mùa thu</h5>
+                  <p><span class="price">28.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice8.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>PEPSI KHÔNG CALO CHANH LON</h5>
+                  <p><span class="price">10.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice9.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>PEPSI KHÔNG CALO CHANH LON</h5>
+                  <p><span class="price">10.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice10.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>PEPSI KHÔNG CALO CHANH LON</h5>
+                  <p><span class="price">10.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice1.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>PEPSI KHÔNG CALO CHANH LON</h5>
+                  <p><span class="price">10.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice2.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>PEPSI KHÔNG CALO CHANH LON</h5>
+                  <p><span class="price">10.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice3.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>PEPSI KHÔNG CALO CHANH LON</h5>
+                  <p><span class="price">10.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice4.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>PEPSI KHÔNG CALO CHANH LON</h5>
+                  <p><span class="price">10.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice5.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>PEPSI KHÔNG CALO CHANH LON</h5>
+                  <p><span class="price">10.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 p-2" style="height: 300px">
+              <a href="../products.html">
+                <div class="item-img" style="height: 80%; overflow: hidden">
+                  <img
+                    src="../image/juice6.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+                <div class="item-detail" style="height: 20%">
+                  <h5>PEPSI KHÔNG CALO CHANH LON</h5>
+                  <p><span class="price">10.000 VNĐ</span></p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="pagination d-flex justify-content-center mt-5">
+        <!-- <li class="page-item"><a class="page-link" href="#">Previous</a></li> -->
+        <li class="page-item">
+          <a class="page-link active" href="#">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- thông tin trang -->
+    <div class="bg-light">
+      <div class="container">
+        <div class="row p-3">
+          <div class="col-md-4 p-5">
+            <h5>VỀ WEBSITE</h5>
+            <p>
+              Web Bán Đồ Ăn Vặt là trang bán đồ ăn, thức uống hàng đầu dành cho
+              bạn trẻ Việt. Web Bán Đồ Ăn Vặt nhanh chóng trở thành sự lựa chọn
+              tối ưu cho việc tìm kiếm món ăn với tốc độ nhanh gấp 7 lần, giao
+              diện hiện đại cùng vô số hình ảnh bắt mắt. Sứ mệnh của chúng tôi
+              là giúp người dùng Việt Nam đơn giản hoá việc tìm kiếm các món ăn,
+              đồ uống và khám phá những món ăn địa điểm thú vị xung quanh họ để
+              có những trải nghiệm tốt hơn mỗi ngày.
+            </p>
+          </div>
+          <div class="col-md-4 p-5">
+            <h5>LIÊN HỆ</h5>
+            <p>
+              Điện thoại: 0384762936 <br />
+              Email: webanvat@gmail.com
+            </p>
+          </div>
+          <div class="col-md-4 p-5">
+            <h5>HỖ TRỢ KHÁCH HÀNG</h5>
+            <ul>
+              <li><a class="text-hover" href="">Giới thiệu</a></li>
+              <li><a class="text-hover" href="">Chính sách đổi trả</a></li>
+              <li><a class="text-hover" href="">Chính sách bảo mật</a></li>
+              <li><a class="text-hover" href="">Điều khoản dịch vụ</a></li>
+              <li><a class="text-hover" href="">liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="bg-dark p-3 text-light">
+        <h6 class="d-flex justify-content-center">
+          Copyright © 2023 by Nhom4-ltweb
+        </h6>
+      </div>
+    </footer>
+  </body>
+  <script src="../script.js"></script>
+</html>

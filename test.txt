@@ -1,0 +1,21 @@
+<div class="input-box">
+  <label for="IdCategory">IdFoodCategory</label>
+  <select name="IdCategory" id="IdCategory">
+      <?php
+      // kết nối
+      require_once '../../connect.php';
+      // Câu lệnh
+      $show_SQL = "SELECT IdCategory FROM food WHERE Id='$id'";
+      //Thực thi câu lệnh
+      $result = mysqli_query($conn, $show_SQL);
+      // duyệt qua từng bảng và in ra
+      while($row = mysqli_fetch_assoc($result)){
+          ?>
+              <option>
+                  <?php echo $row['IdCategory'] ?>
+              </option>
+          <?php
+      }
+      ?>
+  </select>
+</div>

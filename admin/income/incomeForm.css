@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+body {
+    min-height: 100vh;
+}
+
+    /* text-decoration: gạch chân  */
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2 {
+    color: #444;
+}
+
+h1::after {
+    content: '';
+    position: relative;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(125deg, #e6dc71, #b67059);
+}
+
+h3 {
+    color: #999;
+}
+
+.btn {
+    background: #e5674b;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.btn:hover {
+    color: #e5674b;
+    background: white;
+    padding: 3px 8px;
+    border: 2px solid #e5674b;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 10px;
+    border-bottom: 2px solid #e5674b;
+}
+
+table {
+    padding: 10px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+.side-menu {
+    position: fixed;
+    background-color: #e5674b;
+    width: 20vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu .brand-name {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-menu .brand-name a img {
+    width: 120px;
+    height: 50px;
+}
+
+.side-menu li {
+    font-size: 24px;
+    padding: 10px 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.side-menu li a {
+    color: white;
+    display: flex;
+}
+
+.side-menu li a:hover {
+    color: #e5674b;
+    background: white;
+}
+
+.side-menu li i {
+    margin-right: 8px;
+}
+
+.side-menu li:hover {
+    background: white;
+    color: #e5674b;
+}
+
+.container {
+    position: absolute;
+    right: 0;
+    width: 80vw;
+    height: 150vh;
+    background-color: #f1f1f1;
+}
+
+.container .header {
+    position: fixed;
+    height: 10vh;
+    width: 80vw;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+}
+
+.container .header .nav {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .header .nav .user {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.container .header .nav .user h2 {
+    color: #e5674b;
+}
+
+.container .header .nav .user i {
+    display: flex;
+    font-size: 24px;
+    color: #e5674b;
+    margin: 0px 20px;
+}
+
+.container .header .nav .search {
+    font: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.container .header .nav .search input[type=text] {
+    border: none;
+    background: #f1f1f1;
+    padding: 10px;
+}
+
+.container .header .nav .search button i{
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .header .nav .search button i {
+    font-size: 20px;
+}
+
+.container .header .nav .search input {
+    font-size: 18px;
+}
+
+.container .content {
+    position: relative;
+    margin-top: 15vh;
+    min-height: 70vh;
+    margin-left: 80px;
+}
+
+.container .content .list-drinks {
+    max-height: 60vh;
+    width: 90%;
+    background: white;
+    margin: 0 25px 25px 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.container .content .list-drinks title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .content .list-drinks .title button {
+    max-width: 200px;
+    height: 50px;
+    justify-content: left;
+    align-items: center;
+    font-size: 16px;
+}
+
+.container .content .list-drinks .chart {
+    position: relative;
+    padding-left: 120px;
+}
+
+

@@ -1,0 +1,108 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #dcdde1;
+}
+a {
+  text-decoration-line: none;
+  color: black;
+}
+h5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 300px;
+}
+
+.fieldset .field .field-input-wrapper .field-input {
+  box-shadow: 0 0 0 1px #d9d9d9;
+  transition: all 0.2s ease-out;
+  background-color: white;
+  color: #333333;
+  border-radius: 4px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.3em;
+  /* padding: 0.94em 2.8em 0.94em 0.8em; */
+  word-break: normal;
+}
+.step-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+
+  align-items: center;
+  margin-top: 1.5em;
+}
+:root {
+  --main-color: #e8e4dc;
+  --sub-color: #f09c0b;
+  --text-color: #818cc7;
+  --bg-color: #d9e5e7;
+  --menu-color: rgb(246, 246, 235);
+  --about-color: rgb(247, 241, 245);
+  --phan-hoi-color: rgb(236, 231, 241);
+  --cursive-font: "Dancing Script", cursive;
+}
+.text-hover:hover {
+  color: red;
+}
+.active-now {
+  color: red;
+}
+.phan-hoi {
+  background-color: var(--phan-hoi-color);
+}
+
+.phan-hoi-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.phan-hoi-item {
+  width: calc(100% / 3 - 30px);
+  margin: 0 15px;
+  border: 2px solid var(--bg-color);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0, 0, 0, 15px rgba(0, 0, 0, 0.7);
+}
+
+.phan-hoi-item:hover img {
+  border: var(--sub-color);
+}
+
+.phan-hoi-item span {
+  color: var(--text-color);
+}
+
+.phan-hoi-item h2 {
+  font-size: 20px;
+  color: #615bc7;
+}
+
+.phan-hoi-item p {
+  color: #615bc7;
+  font-size: 18px;
+  font-size: 20px 0;
+  text-indent: 20px;
+}
+
+.phan-hoi-item img {
+  width: 150px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  transition: all 0.5s ease;
+  margin-bottom: 20px;
+}
+
+.phan-hoi-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phan-hoi-item-star i {
+  color: var(--sub-color);
+}

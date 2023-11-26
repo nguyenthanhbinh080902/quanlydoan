@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link
+    rel="shortcut icon"
+    href="https://www.foody.vn/style/images/logo/foody-vn.png"
+    type="image/x-icon"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Admin Panel</title>
+</head>
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <a class="navbar-brand" href="index.php">
+                <img
+                    src="https://www.foody.vn/style/images/logo/foody-vn.png"
+                    alt=""
+                />s
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a href="admin.html">
+                    <i class="fa-solid fa-house-user"></i>DashBrand
+                </a>
+            </li>
+            <li>
+                <a href="admin/account/accountForm.php">
+                    <i class="fa-solid fa-user-tie"></i>Account
+                </a>
+            </li>
+            <li>
+                <a href="admin/foodCategory/foodCategoryForm.php">
+                    <i class="fa-solid fa-burger"></i>Food
+                </a>
+            </li>
+            <li>
+                <a href="admin/bill/billForm.php">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>Outline
+                </a>
+            </li>
+            <li>
+                <a href="admin/bill/billForm.php">
+                    <i class="fa-solid fa-money-bills"></i>Income
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <i class="fa-regular fa-circle-question"></i>Help
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-gears"></i>Settings
+                </a>
+            </li>
+            <li>
+                <a href="index.php">
+                    <i class="fa-regular fa-circle-xmark"></i>Exit
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                </div>
+                <div class="user">
+                    <a href="admin/registation.html" class="btn">Create account</a>
+                    <a href="admin/registation.html">
+                        <i class="fa-solid fa-bell"></i>
+                    </a>                   
+                    <a href="admin/gmail.html">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    <div class="box">
+                        <h1>1424</h1>
+                        <h3>Drinks</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <h1>1001</h1>
+                        <h3>Food</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa-solid fa-burger"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <h1>2194</h1>
+                        <h3>Hóa đơn</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="box">
+                        <h1>140.000 Đ</h1>
+                        <h3>Tổng tiền</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa-solid fa-money-bills"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content-2">
+                <div class="recent-payments">
+                    <div class="title">
+                        <h2>Recent-payments</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Time check in</th>
+                            <th>Time check out</th>
+                            <th>Price</th>
+                            <th>See more</th>
+                        </tr>
+                        <tr>
+                            <td>10:00 SA</td>
+                            <td>01:00 CH</td>
+                            <td>156.000 VND</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>10:00 SA</td>
+                            <td>01:00 CH</td>
+                            <td>156.000 VND</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>10:00 SA</td>
+                            <td>01:00 CH</td>
+                            <td>156.000 VND</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>10:00 SA</td>
+                            <td>01:00 CH</td>
+                            <td>156.000 VND</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>10:00 SA</td>
+                            <td>01:00 CH</td>
+                            <td>156.000 VND</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>10:00 SA</td>
+                            <td>01:00 CH</td>
+                            <td>156.000 VND</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="new-drinks">
+                    <div class="title">
+                        <h2>Popular drinks</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Number</th>
+                            <th>See more</th>
+                        </tr>
+                        <tr>
+                            <td>Trà sữa</td>
+                            <td>52.000 VND</td>
+                            <td>100</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>Trà sữa</td>
+                            <td>52.000 VND</td>
+                            <td>100</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>Trà sữa</td>
+                            <td>52.000 VND</td>
+                            <td>100</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>Trà sữa</td>
+                            <td>52.000 VND</td>
+                            <td>100</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>Trà sữa</td>
+                            <td>52.000 VND</td>
+                            <td>100</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>Trà sữa</td>
+                            <td>52.000 VND</td>
+                            <td>100</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
